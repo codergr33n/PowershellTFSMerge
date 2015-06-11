@@ -12,6 +12,7 @@ $binpath   = "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Re
     Add-Type -path "$binpath\Microsoft.TeamFoundation.Client.dll"
     Add-Type -Path "$binpath\Microsoft.TeamFoundation.WorkItemTracking.Client.dll"
     Add-Type -Path "$binpath\Microsoft.TeamFoundation.Common.dll"
+	Add-Type -Path "$binpath\Microsoft.TeamFoundation.VersionControl.Client.dll"
 
 $server = [Microsoft.TeamFoundation.Client.TeamFoundationServerFactory]::GetServer("https://<tfs url>")
 $workItemStore = $server.GetService([Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemStore])
